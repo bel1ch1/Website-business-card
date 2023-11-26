@@ -47,21 +47,35 @@
       </div>
     </nav>
 
-    <div class="container text-center my-5">
+    <div class="container text-center my-5" id="101">
       <div class="row">
         <div class="col-lg-6 col-md-8 mx-auto">
           <img
+            id="110"
             class="svoya-img"
             src="img/7d685a48-5c4f-433f-8bc7-b2527bb9b917.jpg"
             alt="Че не открывается???"
           />
           <h1 class="fw-light">Piman</h1>
-          <p class="lead text-muted">Интерактивная картинка с очень интересным функционалом</p>
-          <button class="btn btn-success">ударить</button>
-          <button class="btn btn-danger">сломать колени</button>
+          <p class="lead text-muted">Интерактивная картинка, c очень интересным функционалом</p>
+          <button class="btn btn-success" onclick="changeColor">ударить</button>
+          <button class="btn btn-danger" onclick="changeColor">сломать колени</button>
         </div>
       </div>
     </div>
+    <script>
+          function changeColor() {
+    var image = document.getElementById('101');
+
+    // Закрашиваем картинку
+    image.style.backgroundColor = 'blue';
+
+    // Через секунду возвращаем обратно
+    setTimeout(function() {
+      image.style.backgroundColor = 'lightgray';
+      }, 1000);
+    }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
   </body>
 </html>
